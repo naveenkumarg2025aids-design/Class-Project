@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 
 function Login() {
 
@@ -45,6 +45,13 @@ function Login() {
                 <button type="submit">Login</button>
 
             </form>
+            
+            <Link to= "/settings">Go to settings</Link>
+            <Link to= "/clients">Go to clients</Link>
+            <Link to= "/calender">Go to calender</Link>
+            <Link to= "/task">Go to Tasks</Link>
+            <Link to= "/team">Go to Team</Link>
+           
         </div>
     )
 }

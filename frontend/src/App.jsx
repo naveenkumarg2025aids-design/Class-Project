@@ -9,6 +9,11 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Settings from './pages/settings'
+import Calender from './pages/calender'
+import Client from './pages/clients'
+import Dashboard from './pages/dashboard'
+import Team from './pages/team'
 
 
 
@@ -29,18 +34,17 @@ function App() {
 
   return (
     <>
-     <BrowserRouter>
-
-      <Routes>
-
-        <Route path="/" element={<Login />} />
-
-        <Route path="/project" element={<Projects />} />
-
-        <Route path="/task" element={<Tasks />} />
-
-      </Routes>
-
+    <BrowserRouter>
+    <Routes>
+      <Route path = "/" element ={<Login/>} />
+      <Route path = "project" element ={<Projects/>}/>
+      <Route path = "/task" element ={<Tasks/>}/>
+      <Route path = "/settings" element ={<Settings/>}/>
+      <Route path = "/calender" element ={<Calender/>}/>
+         <Route path = "/clients" element ={<Client/>}/>
+            <Route path = "/dashboard" element ={<Dashboard/>}/>
+               <Route path = "/team" element ={<Team/>}/>
+    </Routes>
     </BrowserRouter>
     {/*
       <>
