@@ -21,25 +21,30 @@ function Register() {
     }
     return (
         <>
-        <form onSubmit={handleSubmit(onSubmit1)}>
-            <label>Name </label>
+        <div className="min-h-screen w-full bg-gradient-to-br from-grey-400 via-white-400 to-black flex justify-center items-center p-4">
+        <form onSubmit={handleSubmit(onSubmit1)} className="w-full max-w-sm bg-white p-6 sm:p-8 rounded-3xl shadow-2xl space-y-5">
+            <div>
+                <h1 className="text-center text-xl font-bold">Registration From </h1>
+            </div>
+            <label>Name : </label>
             <input placeholder="Enter your name" type="text" {...register("name")} />
             <p>{errors.name?.message}</p>
 
-            <label>Email </label>
-            <input placeholder="Enter your name" type="email" {...register("email")} />
+            <label>Email : </label>
+            <input placeholder="Enter your email" type="email" {...register("email") } />
             <p>{errors.email?.message}</p>
 
-            <label>Password </label>
+            <label>Password : </label>
             <input placeholder="Enter Password"  type="password" {...register("password")} />
             <p>{errors.password?.message}</p>
 
-            <label>Age </label>
+            <label>Age : </label>
             <input placeholder="Enter your age"  type="number" {...register("age")} />
             <p>{errors.age?.message}</p>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className="w-full bg-purple-300 p-2 font-bold rounded-3xl shadow-2xl space-y-5" >Submit</button>
         </form>
+        </div>
         </>
     );
 }
