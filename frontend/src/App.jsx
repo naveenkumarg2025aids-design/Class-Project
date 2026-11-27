@@ -14,6 +14,10 @@ import Calender from './pages/calender'
 import Client from './pages/clients'
 import Dashboard from './pages/dashboard'
 import Team from './pages/team'
+import Register from './pages/register'
+import Admin from './pages/admin/adminlayout'
+import Userdetails from './pages/admin/userdetails'
+import AdminDashboard from './pages/admin/dashboard'
 
 
 
@@ -52,9 +56,17 @@ function handlechange(e){
       <Route path = "/task" element ={<Tasks/>}/>
       <Route path = "/settings" element ={<Settings/>}/>
       <Route path = "/calender" element ={<Calender/>}/>
-         <Route path = "/clients" element ={<Client/>}/>
-            <Route path = "/dashboard" element ={<Dashboard/>}/>
-               <Route path = "/team" element ={<Team/>}/>
+      <Route path = "/clients" element ={<Client/>}/>
+      <Route path = "/dashboard" element ={<Dashboard/>}/>
+      <Route path = "/team" element ={<Team/>}/>
+      <Route path = "/register" element ={<Register/>}/>
+      <Route path = "/admin" element ={<Admin/>}>
+         <Route path = "dashboard" element ={<AdminDashboard/>}/>
+         <Route path = "settings" element ={<Settings/>}/>
+         <Route path = "userdetails" element ={<Userdetails/>}/>
+
+      </Route>
+        
     </Routes>
     </BrowserRouter>
     

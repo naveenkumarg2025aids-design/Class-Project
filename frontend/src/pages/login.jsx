@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function Login() {
 
@@ -7,24 +7,37 @@ function Login() {
     //const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
-
-    const[formdata,setFormdata] = useState({
+    const location = useLocation()
+    const[logindata,setlogindata] = useState({
         username:"",
         password:""
     })
+    const registerdata = location.state
 
     function handleChange(e){
         e.preventDefault();
-        setFormdata({
-            ...formdata,
+        setlogindata({
+            ...logindata,
             [e.target.name]:e.target.value
         })
     }
 
     const handlesubmit = (event) => {
         event.preventDefault()
-        console.log(formdata)
-        navigate('/project')
+        console.log("Register data",registerdata)
+        if(logindata.username===registerdata.name && logindata.password===registerdata.password){
+            console.log("Success")
+            navigate("/dashboard")
+            {
+                state : logindata
+            }
+        }
+        else{
+
+            console.log("Invalid credencials")
+
+        }
+        
     }
 
     return (
