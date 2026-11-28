@@ -76,6 +76,7 @@ function handlechange(e){
     <div className="email">Email</div>
     <input type="email" required placeholder="Enter your email" value={email} onChange={(e)=> setEmail(e.target.value)} /><br/><br/>
     <div className="password">Password</div>
+    
     <input type="password" required placeholder="Enter your password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
     <button type="submit" onClick={()=>console.log(email,password)}>Submit</button><br/><br/>
     <button type="submit" onClick={()=>print()}>Submit</button>

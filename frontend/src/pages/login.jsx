@@ -45,11 +45,13 @@ function Login() {
             <h1>Login Page</h1><br></br>
 
             <form onSubmit={handlesubmit}>
-                <input type="text" placeholder="Enter username" name="username" onChange={handleChange}/>
+                <label></label>
+                <input type="text" placeholder="Enter your username." name="username" onChange={handleChange}/>
                 <br /><br />
-                <input type="password" placeholder="Enter password" name="password" onChange={handleChange} />
+                <input type="password" placeholder="Enter your  password" name="password" onChange={handleChange} />
                 <br /><br />
                 <button type="submit">Login</button>
+                
             </form>
         </div>
     )
