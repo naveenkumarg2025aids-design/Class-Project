@@ -27,10 +27,10 @@ function Login() {
         console.log("Register data",registerdata)
         if(logindata.username===registerdata.name && logindata.password===registerdata.password){
             console.log("Success")
-            navigate("/dashboard")
+            navigate("/dashboard",
             {
                 state : logindata
-            }
+            })
         }
         else{
 

@@ -21,7 +21,7 @@ function Register() {
     }
     return (
         <>
-        <div className="min-h-screen w-full bg-gradient-to-br from-grey-400 via-white-400 to-black flex justify-center items-center p-4">
+        <div className="min-h-screen w-full bg-gradient-to-br from-red-500 via-white-400 to-black flex justify-center items-center p-4">
         <form onSubmit={handleSubmit(onSubmit1)} className="w-full max-w-sm bg-white p-6 sm:p-8 rounded-3xl shadow-2xl space-y-5">
             <div>
                 <h1 className="text-center text-xl font-bold">Registration From </h1>
@@ -42,7 +42,7 @@ function Register() {
             <input placeholder="Enter your age"  type="number" {...register("age")} />
             <p>{errors.age?.message}</p>
 
-            <button type="submit" className="w-full bg-purple-300 p-2 font-bold rounded-3xl shadow-2xl space-y-5" >Submit</button>
+            <button type="submit" className="w-full bg-red-300 p-2 font-bold rounded-3xl shadow-2xl space-y-5" >Submit</button>
         </form>
         </div>
         </>
